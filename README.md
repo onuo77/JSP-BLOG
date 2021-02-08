@@ -33,11 +33,11 @@
 <hr/>
 
 ## MYSQL Creating Database & User
-<pre>
+<pre>```sql
 CREATE USER 'bloguser'@'%' IDENTIFIED BY 'blog001';
 GRANT ALL privileges ON *.* TO 'bloguser'@'%';
 CREATE DATABASE bloguser;
-</pre>
+```</pre>
 
 ## MYSQL Creating Table
 <pre>
