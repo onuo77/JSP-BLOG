@@ -130,3 +130,8 @@ create table reply(
 
 ### [검색(Search)](#주요기능-Key-Features)
 ![006](https://user-images.githubusercontent.com/78708523/107168533-f94b3f80-69fe-11eb-8dbd-39709301fa5b.gif)
+
+<hr/>
+
+### [페이지 진행바(Page Progress)](#주요기능-Key-Features)
+![008](https://user-images.githubusercontent.com/78708523/107175500-58fe1680-6a10-11eb-9ff9-f19a399a57c4.gif)
