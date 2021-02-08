@@ -20,7 +20,7 @@
 + HTML
 + CSS
 
-## 프레임워크 및 라이브러리 (Framework & library)
+## 프레임워크 및 라이브러리 (Framework & Library)
 + Bootstrap 4.5.2
 + Lombok
 + jQuery 3.5.1
