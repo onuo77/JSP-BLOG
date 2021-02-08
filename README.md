@@ -89,7 +89,7 @@ create table reply(
 
 ## 주요기능 (Key Features)
 + [회원가입(Sign Up)](#회원가입Sign-Up)	
-+ [로그인(Login)](#로그인Login)
++ [로그인(Login)&로그아웃(Logout)](#로그인Login로그아웃Logout)
 + [글수정(Post Modify)](#글수정Post-Modify)
 + [댓글 작성&삭제(Comment Write&Delete)](#댓글-작성삭제Comment-WriteDelete)
 + [검색(Search)](#검색Search)
@@ -99,10 +99,10 @@ create table reply(
 
 <hr/>
 
-### [로그인(Login)](#주요기능-Key-Features)
-- 성공(Success)
-![002_1](https://user-images.githubusercontent.com/78708523/107166217-a4a4c600-69f8-11eb-912d-b1eea9d03203.gif)
-- 실패(Failed)
+### [로그인(Login)&로그아웃(Logout)](#주요기능-Key-Features)
+- 로그인 성공&로그아웃 (Login Sucess & Logout)
+![loginout](https://user-images.githubusercontent.com/78708523/107170322-5f39c600-6a03-11eb-99a8-dddc9c0285c1.gif)
+- 로그인 실패(Login Failed)
 ![002_2](https://user-images.githubusercontent.com/78708523/107166432-56dc8d80-69f9-11eb-9323-22c6378e44d5.gif)
 
 <hr/>
