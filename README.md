@@ -87,6 +87,11 @@ create table reply(
 
 <hr/>
 
+## 작동과정(Operating Process)
+Requset > Controller > DAO > Service > DB > Service > DAO > Controller > jsp
+
+<hr/>
+
 ## 주요기능 (Key Features)
 + [회원가입(Sign Up)](#회원가입Sign-Up)	
 + [로그인(Login)&로그아웃(Logout)](#로그인Login로그아웃Logout)
@@ -142,3 +147,6 @@ create table reply(
 
 ### [페이지 진행바(Page Progress)](#주요기능-Key-Features)
 ![008](https://user-images.githubusercontent.com/78708523/107175500-58fe1680-6a10-11eb-9ff9-f19a399a57c4.gif)
+
+<hr/>
+
