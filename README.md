@@ -88,8 +88,8 @@ create table reply(
 <hr/>
 
 ## 주요기능 (Key Features)
-+ [회원가입(Sign Up)](#회원가입_sign_up)	
-+ [로그인(Login)](#로그인login)
++ [회원가입(Sign Up)](#회원가입Sign_Up)	
++ [로그인(Login)](#로그인Login)
 +
 
 ### 회원가입(Sign Up)
@@ -97,7 +97,7 @@ create table reply(
 
 <hr/>
 
-### [로그인(Login)](#주요기능_Key_features)
+### [로그인(Login)](#주요기능_Key_Features)
 - 성공(Success)
 ![002_1](https://user-images.githubusercontent.com/78708523/107166217-a4a4c600-69f8-11eb-912d-b1eea9d03203.gif)
 - 실패(Failed)
