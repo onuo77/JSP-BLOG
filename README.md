@@ -1,7 +1,9 @@
 # JSP-BLOG (Reply builtin Board System) - Personal Project
 
 ## 목적(Purpose)
-+ 웹개발의 전체적인 순서를 이해하기
++ 웹개발의 작동 과정 이해하기
++ JSP와 APACHE TOMCAT을 이용해 브라우저와 서버 간의 Request, Response 이해하기
++ JDBC를 통해 JAVA와 MYSQL을 연결하는 과정  
 + 반복된 연습으로 최적화된 게시판 생성하기
 
 <hr/>
