@@ -88,8 +88,8 @@ create table reply(
 <hr/>
 
 ## 주요기능 (Key Features)
-+ [회원가입(Sign Up)](#회원가입_sign_Up)	
-+
++ [회원가입(Sign Up)](#회원가입_sign_up)	
++ [로그인(Login)](#로그인Login)
 +
 
 ### 회원가입(Sign Up)
