@@ -88,6 +88,10 @@ create table reply(
 <hr/>
 
 ## 주요기능 (Key Features)
++ [회원가입(Sign Up)](#회원가입_sign_Up)	
++
++
+
 ### 회원가입(Sign Up)
 ![001](https://user-images.githubusercontent.com/78708523/107165837-82f70f00-69f7-11eb-88e9-e91f08dfebc5.gif)
 
