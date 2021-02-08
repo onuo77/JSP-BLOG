@@ -90,9 +90,11 @@ create table reply(
 ## 주요기능 (Key Features)
 + [회원가입(Sign Up)](#회원가입Sign-Up)	
 + [로그인(Login)](#로그인Login)
-+
++ [글수정(Post Modify)](#글수정Post-Modify)
++ [댓글 작성&삭제(Comment Write&Delete)](#댓글-작성삭제Comment-WriteDelete)
++ [검색(Search)](#검색Search)
 
-### 회원가입(Sign Up)
+### [회원가입(Sign Up)](#주요기능-Key-Features)
 ![001](https://user-images.githubusercontent.com/78708523/107165837-82f70f00-69f7-11eb-88e9-e91f08dfebc5.gif)
 
 <hr/>
@@ -105,20 +107,20 @@ create table reply(
 
 <hr/>
 
-### 글수정(Post Modify)
+### [글수정(Post Modify)](#주요기능-Key-Features)
 ![004](https://user-images.githubusercontent.com/78708523/107167239-b8056080-69fb-11eb-8a5c-f52271662582.gif)
 
 <hr/>
 
-### 글삭제(Post Delete)
+### [글삭제(Post Delete)](#주요기능-Key-Features)
 ![004_2](https://user-images.githubusercontent.com/78708523/107167243-b9368d80-69fb-11eb-9d67-f54b7b1a5c32.gif)
 
 <hr/>
 
-### 댓글 작성&삭제(Comment Write&Delete)
+### [댓글 작성&삭제(Comment Write&Delete)](#주요기능-Key-Features)
 ![005](https://user-images.githubusercontent.com/78708523/107167247-bb005100-69fb-11eb-8381-6105700ace0c.gif)
 
 <hr/>
 
-### 검색(Search)
+### [검색(Search)](#주요기능-Key-Features)
 ![006](https://user-images.githubusercontent.com/78708523/107168533-f94b3f80-69fe-11eb-8dbd-39709301fa5b.gif)
