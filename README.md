@@ -6,12 +6,12 @@
 
 <hr/>
 
-## 개발환경(Development Environment)
+## 개발환경 (Development Environment)
 + eclips 4.16.0
 + MySQL 8.0
 + Apache Tomcat 8.5
 
-## 개발언어(Programming Language)
+## 개발언어 (Programming Language)
 + Java 1.8.0_261
 + Jsp
 + JavaScript
@@ -32,14 +32,14 @@
 
 <hr/>
 
-## MYSQL Creating Database & User
+## MYSQL 데이터베이스 & 사용자 생성 (Creating Database & User)
 ```sql
 CREATE USER 'bloguser'@'%' IDENTIFIED BY 'blog001';
 GRANT ALL privileges ON *.* TO 'bloguser'@'%';
 CREATE DATABASE bloguser;
 ```
 
-## MYSQL Creating Table
+## MYSQL 테이블 생성(Creating Table)
 ```sql
 use bloguser; 
 
@@ -76,14 +76,15 @@ create table reply(
 
 <hr/>
 
-## jspblog Pakage
+## jspblog 패키지 (Pakage)
 ![image](https://user-images.githubusercontent.com/78708523/107164592-1a0d9800-69f3-11eb-8d41-d3ddfb45648d.png)
 ![image](https://user-images.githubusercontent.com/78708523/107164641-475a4600-69f3-11eb-8818-40a1561fc376.png)
 
 <hr/>
 
-## jspblog ERD
+## jspblog 데이터베이스 모델링 (ERD)
 ![image](https://user-images.githubusercontent.com/78708523/107164686-753f8a80-69f3-11eb-905f-96d0baf5ebe0.png)
 
 <hr/>
 
+## 주요기능 (Key Features)
