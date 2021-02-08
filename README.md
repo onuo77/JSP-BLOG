@@ -107,6 +107,11 @@ create table reply(
 
 <hr/>
 
+### [개인정보수정(UserInfo Modify)](#주요기능-Key-Features)
+![007](https://user-images.githubusercontent.com/78708523/107170318-5e089900-6a03-11eb-97c6-9ffd134d1a80.gif)
+
+<hr/>
+
 ### [글수정(Post Modify)](#주요기능-Key-Features)
 ![004](https://user-images.githubusercontent.com/78708523/107167239-b8056080-69fb-11eb-8a5c-f52271662582.gif)
 
