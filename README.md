@@ -73,3 +73,5 @@ create table reply(
     foreign key (boardId) references board (id) on delete cascade
 )engine = InnoDB default charset = utf8;
 ```
+
+## jspblog pakage
