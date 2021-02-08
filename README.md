@@ -102,7 +102,7 @@ Requset > Controller > DAO > Service > DB > Service > DAO > Controller > Respons
 + [글수정(Post Modify)](#글수정Post-Modify)
 + [댓글 작성&삭제(Comment Write&Delete)](#댓글-작성삭제Comment-WriteDelete)
 + [검색(Search)](#검색Search)
-+ [페이지 진행바(Page Progress)](#페이지-진행바Page-Progress)
++ [페이징 진행바(Paging Progress)](#페이징-진행바Paging-Progress)
 
 ### [회원가입(Sign Up)](#주요기능-Key-Features)
 ![001](https://user-images.githubusercontent.com/78708523/107165837-82f70f00-69f7-11eb-88e9-e91f08dfebc5.gif)
@@ -147,7 +147,7 @@ Requset > Controller > DAO > Service > DB > Service > DAO > Controller > Respons
 
 <hr/>
 
-### [페이지 진행바(Page Progress)](#주요기능-Key-Features)
+### [페이징 진행바(Paging Progress)](#주요기능-Key-Features)
 ![008](https://user-images.githubusercontent.com/78708523/107175500-58fe1680-6a10-11eb-9ff9-f19a399a57c4.gif)
 
 <hr/>
