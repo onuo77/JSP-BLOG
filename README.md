@@ -115,5 +115,6 @@ create table reply(
 ![005](https://user-images.githubusercontent.com/78708523/107167247-bb005100-69fb-11eb-8381-6105700ace0c.gif)
 
 <hr/>
+
 ### 검색(Search)
 ![006](https://user-images.githubusercontent.com/78708523/107168533-f94b3f80-69fe-11eb-8dbd-39709301fa5b.gif)
