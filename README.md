@@ -97,3 +97,11 @@ create table reply(
 	- 실패(Failed)
 ![002_2](https://user-images.githubusercontent.com/78708523/107166432-56dc8d80-69f9-11eb-9323-22c6378e44d5.gif)
 
++ 글수정(Post Modify)
+
+![004](https://user-images.githubusercontent.com/78708523/107167239-b8056080-69fb-11eb-8a5c-f52271662582.gif)
++ 글삭제(Post Delete)
+![004_2](https://user-images.githubusercontent.com/78708523/107167243-b9368d80-69fb-11eb-9d67-f54b7b1a5c32.gif)
+
++ 댓글삭제(Comment Delete)
+![005](https://user-images.githubusercontent.com/78708523/107167247-bb005100-69fb-11eb-8381-6105700ace0c.gif)
