@@ -33,14 +33,14 @@
 <hr/>
 
 ## MYSQL Creating Database & User
-<pre>```sql
+```sql
 CREATE USER 'bloguser'@'%' IDENTIFIED BY 'blog001';
 GRANT ALL privileges ON *.* TO 'bloguser'@'%';
 CREATE DATABASE bloguser;
-```</pre>
+```
 
 ## MYSQL Creating Table
-<pre>
+```sql
 use bloguser; 
 
 CREATE TABLE users(
@@ -72,4 +72,4 @@ create table reply(
     foreign key (userId) references users (id) on delete set null,
     foreign key (boardId) references board (id) on delete cascade
 )engine = InnoDB default charset = utf8;
-</pre>
+```
