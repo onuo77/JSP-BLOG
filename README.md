@@ -74,4 +74,16 @@ create table reply(
 )engine = InnoDB default charset = utf8;
 ```
 
-## jspblog pakage
+<hr/>
+
+## jspblog Pakage
+![image](https://user-images.githubusercontent.com/78708523/107164592-1a0d9800-69f3-11eb-8d41-d3ddfb45648d.png)
+![image](https://user-images.githubusercontent.com/78708523/107164641-475a4600-69f3-11eb-8818-40a1561fc376.png)
+
+<hr/>
+
+## jspblog ERD
+![image](https://user-images.githubusercontent.com/78708523/107164686-753f8a80-69f3-11eb-905f-96d0baf5ebe0.png)
+
+<hr/>
+
