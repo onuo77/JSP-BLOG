@@ -91,6 +91,7 @@ create table reply(
 + [회원가입(Sign Up)](#회원가입Sign-Up)	
 + [로그인(Login)&로그아웃(Logout)](#로그인Login로그아웃Logout)
 + [개인정보수정(UserInfo Modify)](#개인정보수정UserInfo-Modify)
++ [글작성(Write)](#글작성Write)
 + [글수정(Post Modify)](#글수정Post-Modify)
 + [댓글 작성&삭제(Comment Write&Delete)](#댓글-작성삭제Comment-WriteDelete)
 + [검색(Search)](#검색Search)
@@ -111,6 +112,11 @@ create table reply(
 
 ### [개인정보수정(UserInfo Modify)](#주요기능-Key-Features)
 ![007](https://user-images.githubusercontent.com/78708523/107170318-5e089900-6a03-11eb-97c6-9ffd134d1a80.gif)
+
+<hr/>
+
+### [글작성(Write)](#주요기능-Key-Features)
+![003](https://user-images.githubusercontent.com/78708523/107175983-8b5c4380-6a11-11eb-9794-33343343ed2f.gif)
 
 <hr/>
 
