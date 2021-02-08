@@ -90,7 +90,7 @@ create table reply(
 <hr/>
 
 ## 작동과정(Operating Process)
-Requset > Controller > DAO > Service > DB > Service > DAO > Controller > jsp
+Requset > Controller > DAO > Service > DB > Service > DAO > Controller > Response
 
 <hr/>
 
