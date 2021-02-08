@@ -92,9 +92,9 @@ create table reply(
 ![001](https://user-images.githubusercontent.com/78708523/107165837-82f70f00-69f7-11eb-88e9-e91f08dfebc5.gif)
 
 ### 로그인(Login)
-	- 성공(Success)
+- 성공(Success)
 ![002_1](https://user-images.githubusercontent.com/78708523/107166217-a4a4c600-69f8-11eb-912d-b1eea9d03203.gif)
-	- 실패(Failed)
+- 실패(Failed)
 ![002_2](https://user-images.githubusercontent.com/78708523/107166432-56dc8d80-69f9-11eb-9323-22c6378e44d5.gif)
 
 ### 글수정(Post Modify)
