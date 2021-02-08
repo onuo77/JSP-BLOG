@@ -150,3 +150,6 @@ Requset > Controller > DAO > Service > DB > Service > DAO > Controller > jsp
 
 <hr/>
 
+## 더 추가해보고 싶은 기능
++ 댓글 수정 및 대댓글 기능
++ 게시글 앞에 이미지 첨부 시 썸네일 표시 기능
