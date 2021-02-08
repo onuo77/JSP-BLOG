@@ -94,6 +94,7 @@ create table reply(
 + [글수정(Post Modify)](#글수정Post-Modify)
 + [댓글 작성&삭제(Comment Write&Delete)](#댓글-작성삭제Comment-WriteDelete)
 + [검색(Search)](#검색Search)
++ [페이지 진행바(Page Progress)](#페이지-진행바Page-Progress)
 
 ### [회원가입(Sign Up)](#주요기능-Key-Features)
 ![001](https://user-images.githubusercontent.com/78708523/107165837-82f70f00-69f7-11eb-88e9-e91f08dfebc5.gif)
