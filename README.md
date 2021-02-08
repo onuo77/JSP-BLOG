@@ -29,4 +29,12 @@
 
 ## API
 + SummerNote
+
 <hr/>
+
+## MYSQL Creating Database & User
+<pre><code>
+CREATE USER 'bloguser'@'%' IDENTIFIED BY 'blog001';
+GRANT ALL privileges ON *.* TO 'bloguser'@'%';
+CREATE DATABASE bloguser;
+</code></pre>
