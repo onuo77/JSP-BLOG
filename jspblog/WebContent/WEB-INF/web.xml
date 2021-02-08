@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee                       http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+  <display-name>jspblog</display-name>
+<!--   <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  -->
+  <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+  <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+
+<resource-ref>
+      <description>DB Connection</description>
+      <res-ref-name>mysql/bloguser</res-ref-name>
+      <res-type>javax.sql.DataSource</res-type>
+      <res-auth>Container</res-auth>
+  </resource-ref>
+ 
+ <filter>
+ 	<filter-name>charConfig</filter-name>
+ 	<filter-class>com.blog.config.CharConfig</filter-class>
+ </filter>
+ 
+ <filter-mapping>
+ 	<filter-name>charConfig</filter-name>
+ 	<url-pattern>/*</url-pattern>
+ </filter-mapping>
+
+<filter>
+	<filter-name>forbiddenUrlConfig</filter-name>
+	<filter-class>com.blog.config.ForbiddenUrlConfig</filter-class>
+</filter>
+
+<filter-mapping>
+	<filter-name>forbiddenUrlConfig</filter-name>
+	<url-pattern>*.jsp</url-pattern>
+</filter-mapping>
+</web-app>
