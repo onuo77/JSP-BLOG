@@ -98,7 +98,7 @@ Requset > Controller > DAO > Service > DB > Service > DAO > Controller > Respons
 + [회원가입(Sign Up)](#회원가입Sign-Up)	
 + [로그인(Login)&로그아웃(Logout)](#로그인Login로그아웃Logout)
 + [개인정보수정(UserInfo Modify)](#개인정보수정UserInfo-Modify)
-+ [글작성(Write)](#글작성Write)
++ [글작성(Porst Write)](#글작성Post-Write)
 + [글수정(Post Modify)](#글수정Post-Modify)
 + [댓글 작성&삭제(Comment Write&Delete)](#댓글-작성삭제Comment-WriteDelete)
 + [검색(Search)](#검색Search)
@@ -122,7 +122,7 @@ Requset > Controller > DAO > Service > DB > Service > DAO > Controller > Respons
 
 <hr/>
 
-### [글작성(Write)](#주요기능-Key-Features)
+### [글작성(Post Write)](#주요기능-Key-Features)
 ![003](https://user-images.githubusercontent.com/78708523/107175983-8b5c4380-6a11-11eb-9794-33343343ed2f.gif)
 
 <hr/>
