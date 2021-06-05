@@ -1,4 +1,4 @@
-# JSP-BLOG (Reply builtin Board System) - Personal Project
+# JSP-BLOG (Reply Bulletin Board System) - Personal Project
 
 ## 목적(Purpose)
 + 웹개발의 작동 과정 이해하기
