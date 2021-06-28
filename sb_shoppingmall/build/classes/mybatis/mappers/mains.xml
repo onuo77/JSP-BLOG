@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="mains">
+	
+	<select id="getProductInfo" parameterType="int" resultType="com.sb.vo.Product">
+		select 
+		    product_no as no, 
+		    product_name as name, 
+		    product_price as price, 
+		    product_stock as stock,
+		    product_type as type,
+		    product_producer as producer,
+		    product_location as location,
+		    product_mfd as mfdDate,
+		    product_exp as expDate,
+		    product_cs_num as cs_num
+		from sb_products
+		where product_no = #{value}
+	</select>
+	
+	<select id="getRecentProducts" resultType="com.sb.vo.Product">
+	   select 
+		    product_no as no, 
+		    product_name as name, 
+		    product_price as price
+		from(select *
+    		from sb_products
+   			 order by product_no desc)
+		where rownum &lt;= 8
+	</select>
+	
+	<select id="getEventProducts" parameterType="int" resultType="com.sb.dto.MainDto">
+	select
+		    e.event_no as eventNo,
+		    e.event_title as title,
+		    p.product_no as productNo,
+		    p.product_name as productName,
+		    p.product_price as productPrice
+	from
+    		sb_events e, sb_event_items ei, sb_products p
+	where
+    		e.event_no = ei.event_no
+			and ei.product_no = p.product_no
+			and e.event_no = #{value}
+	</select>
+	
+	
+</mapper>

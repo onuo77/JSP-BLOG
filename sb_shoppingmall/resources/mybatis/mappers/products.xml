@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="products">
+	
+	<select id="getProductInfo" parameterType="int" resultType="com.sb.vo.Product">
+		select 
+		    product_no as no, 
+		    product_name as name, 
+		    product_price as price, 
+		    product_stock as stock,
+		    product_type as type,
+		    product_producer as producer,
+		    product_location as location,
+		    product_mfd as mfdDate,
+		    product_exp as expDate,
+		    product_cs_num as cs_num
+		from sb_products
+		where product_no = #{value}
+	</select>
+	
+	<select id="getProductByNo" parameterType="int" resultType="com.sb.vo.Product">
+		select 
+		    product_no as no, 
+		    product_name as name, 
+		    product_price as price, 
+		    product_stock as stock,
+		    product_type as type,
+		    product_producer as producer,
+		    product_location as location,
+		    product_mfd as mfdDate,
+		    product_exp as expDate,
+		    product_cs_num as cs_num
+		from sb_products
+		where product_no = #{value}
+	</select>
+	
+	<update id="updateStockByNo" parameterType="int">
+		update sb_products set (product_stock) = (product_stock -(select cart_item_amount
+    from sb_cart where product_no = #{value }))
+		where product_no = #{value}
+	</update>
+	
+	<update id="updateAddStockByNo" parameterType="int">
+		update sb_products set (product_stock) = (product_stock +(select cart_item_amount
+    from sb_cart where product_no = #{value }))
+		where product_no = #{value}
+	</update>
+
+</mapper>

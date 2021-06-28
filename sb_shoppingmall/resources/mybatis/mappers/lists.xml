@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="lists">
+	<select id="getProductsByRecipe" parameterType="int" resultType="com.sb.vo.Product">
+		select
+			p.product_no			as no,
+			p.product_name			as name,
+			p.product_producer		as producer,
+			p.product_price			as price,
+			p.product_stock			as stock
+		from
+			sb_recipe_items r, sb_products p
+		where
+			r.recipe_no = #{value}
+		and
+			r.product_no = p.product_no
+	</select>
+	
+	<select id="getProductsByEventTotalRows" parameterType="int" resultType="int">
+		select 
+			count(*)
+		from (
+			select
+				p.product_no			as no,
+				p.product_name			as name,
+				p.product_producer		as producer,
+				p.product_price			as price,
+				p.product_stock			as stock
+			from
+				sb_event_items e, sb_products p
+			where
+				e.event_no = #{value}
+			and
+				e.product_no = p.product_no
+			and
+				p.product_stock &gt; 0
+			and
+				p.product_exp &gt; sysdate
+			)
+		
+	</select>
+	
+	<select id="getProductsByEventNo" parameterType="map" resultType="com.sb.vo.Product">
+		select
+			no, name, producer, price, stock
+		from(
+			select
+				row_number() over (order by p.product_created_date desc) rn,	
+				p.product_no		as no,
+				p.product_name		as name,
+				p.product_producer	as producer,
+				p.product_price		as price,
+				p.product_stock		as stock,
+				p.product_created_date as createdDate
+			from	
+				sb_event_items e, sb_products p
+			where
+				e.event_no = #{eventNo}
+			and
+				e.product_no = p.product_no
+			and
+				p.product_stock &gt; 0
+			and
+				p.product_exp &gt; sysdate	
+			)	
+		where rn between #{beginIndex} and #{endIndex}				
+	</select>
+	
+	<select id="getAllProductsTotalRows" parameterType="map" resultType="int">
+		select 
+			count(*)
+		from 
+			sb_products
+		where	
+		<if test="keyword != null">
+			product_name like '%' || #{keyword} || '%' and
+		</if>
+			product_stock &gt; 0
+		and
+			product_exp &gt; sysdate
+	</select>
+	
+	<select id="getAllProductsUpToDate" parameterType = "map" resultType="com.sb.vo.Product">
+		select
+			no, name, producer, price, stock
+		from(
+			select
+				row_number() over (order by product_created_date desc) rn,
+				product_no			as no,
+				product_name		as name,
+				product_producer	as producer,
+				product_price		as price,
+				product_stock		as stock
+			from
+				sb_products
+			where
+				<if test="keyword != null">
+				product_name like '%' || #{keyword} || '%' and
+				</if>
+				product_stock &gt; 0
+			and
+				product_exp &gt; sysdate
+			)
+		where rn between #{beginIndex} and #{endIndex}
+	</select>
+	<select id="getAllProductsByBestTotalRows" resultType="int">
+		select 
+			count(*)
+		from 
+			sb_products
+		where	
+		<if test="keyword != null">
+			product_name like '%' || #{keyword} || '%' and
+		</if>
+			product_stock &gt; 0
+		and
+			product_exp &gt; sysdate
+	</select>
+	
+	<select id="getAllProductsByBest" parameterType = "map" resultType="com.sb.vo.Product">
+		select rn, product_no, totalSold
+		from(
+		    select row_number() over (order by totalSold desc) rn, product_no, totalSold
+		    from(select product_no, sum(order_item_amount) as totalSold
+		        from sb_orders
+		        group by product_no)
+		    )
+		where rn between #{beginIndex} and #{endIndex}
+	</select>
+	
+	<select id="getCateNameByCateNo" parameterType="int" resultType="string">
+		select category_name
+		from sb_category
+		where category_no = #{value}
+	</select>
+	
+	<select id="getProductsByCateTotalRows" parameterType="int" resultType="int">
+		select 
+			count(*)
+		from 
+			sb_products
+		where	
+			category_no = #{value}
+		and
+			product_stock &gt; 0
+		and
+			product_exp &gt; sysdate
+	</select>
+		
+	<select id="getProductsByCateUpToDate" parameterType = "map" resultType="com.sb.vo.Product">
+		select
+			no, name, producer, price, stock, category
+		from(
+			select
+				row_number() over (order by product_created_date desc) rn,
+				product_no			as no,
+				product_name		as name,
+				product_producer	as producer,
+				product_price		as price,
+				product_stock		as stock,
+				category_no			as category
+			from
+				sb_products
+			where
+				category_no = #{category}
+			and
+				product_stock &gt; 0				
+			and
+				product_exp &gt; sysdate
+			)
+		where rn between #{beginIndex} and #{endIndex}
+	</select>
+	
+	<select id="getProductsThisMonthTotalRows" parameterType ="map" resultType="int">
+		select 
+			count(*)
+		from 
+			sb_products
+		where
+			<if test="keyword != null">
+			product_name like '%' || #{keyword} || '%' and
+			</if>
+			product_stock &gt; 0
+		and
+			product_exp &gt; sysdate
+		and
+			to_char(product_created_date,'YYYY-MM')=to_char(sysdate,'YYYY-MM')	
+	</select>
+	
+	<select id="getProductsThisMonthUpToDate" parameterType="map" resultType="com.sb.vo.Product">
+		select
+			no, name, producer, price, stock
+		from(
+			select
+				row_number() over (order by product_created_date desc) rn,
+				product_no			as no,
+				product_name		as name,
+				product_producer	as producer,
+				product_price		as price,
+				product_stock		as stock
+			from
+				sb_products
+			where
+				<if test="keyword != null">
+				product_name like '%' || #{keyword} || '%' and
+				</if>
+				product_stock &gt; 0
+			and
+				product_exp &gt; sysdate
+			and
+				to_char(product_created_date,'YYYY-MM')=to_char(sysdate,'YYYY-MM')	
+			)
+		where rn between #{beginIndex} and #{endIndex}	
+	</select>
+</mapper>

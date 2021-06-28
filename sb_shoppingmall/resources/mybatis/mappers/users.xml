@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="users">
+
+	<insert id="insertUser" parameterType="com.sb.vo.User">
+		insert into sb_users
+		(user_id, user_name, user_pwd, user_phone, user_email, user_address)
+		values
+		(#{id}, #{name}, #{pwd}, #{phone}, #{email}, #{address})
+	</insert>
+	
+	<select id="getUserById" parameterType="string" resultType="com.sb.vo.User">
+		select
+			user_id			as id,
+			user_name		as name,
+			user_pwd		as pwd,
+			user_phone		as phone,
+			user_email		as email,
+			user_address	as address,
+			user_role_type		as roleType,
+			user_created_date	as createdDate,
+			user_status			as status
+		from
+			sb_users
+		where
+			user_id = #{value}
+	</select>
+	
+	<select id="getAllUser" resultType="com.sb.vo.User">
+		select 
+			user_id			as id,
+			user_name		as name,
+			user_pwd		as pwd,
+			user_phone		as phone,
+			user_email		as email,
+			user_address	as address
+		from 
+			sb_users
+	</select>
+
+	<select id="getStat" parameterType="string" resultType="com.sb.vo.User">
+		select
+			user_id			as id,
+			user_name		as name,
+			user_pwd		as pwd,
+			user_phone		as phone,
+			user_email		as email,
+			user_address	as address,
+			user_role_type		as roleType,
+			user_created_date	as createdDate,
+			user_status			as status 
+		from sb_users
+		where
+			user_status = #{value}
+	</select>
+	
+	<select id="getUserByPwd" parameterType="string" resultType="com.sb.vo.User">
+		select 
+			user_id			as id,
+			user_name		as name,
+			user_pwd		as pwd,
+			user_phone		as phone,
+			user_email		as email,
+			user_address	as address,
+			user_role_type		as roleType,
+			user_created_date	as createdDate,
+			user_status			as status
+		from sb_users
+		where
+			user_pwd = #{value}
+	</select>
+	
+	
+	<update id="updateUser" parameterType="com.sb.vo.User">
+		update 
+			sb_users
+		set 
+		 	user_phone = #{phone}, 
+		 	user_email = #{email}, 
+		 	user_address = #{address}
+		where user_id = #{id}
+	</update>
+	
+	<update id="exitUser" parameterType="com.sb.vo.User">
+		update sb_users
+		set user_status = #{status}
+		where user_id = #{id}
+	</update>
+	
+	<update id="passwordChange" parameterType="com.sb.vo.User">
+		update sb_users
+		set user_pwd = #{pwd}
+		where user_id = #{id}
+	</update>
+	
+</mapper>

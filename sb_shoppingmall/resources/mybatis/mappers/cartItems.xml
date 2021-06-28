@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="cartItems">
+
+	<delete id="deleteCartItem" parameterType="int">
+		delete sb_cart
+		where cart_item_no = #{value}
+	</delete>
+	
+	<delete id="deleteAllCartItem" parameterType="string">
+		delete sb_cart
+		where user_id = #{value}
+	</delete>
+	
+	<insert id="insertCartItem" parameterType="com.sb.vo.CartItem">
+		insert into sb_cart
+		(cart_item_no, user_id, product_no)
+		values
+		(cartitem_seq.nextval, #{userId}, #{productNo})
+	</insert>
+	
+	<select id="getCartItemByNo" parameterType="int" resultType="com.sb.vo.CartItem">
+		select cart_item_no as no,
+			cart_item_amount as amount,
+			user_id as userId,
+			product_no as productNo,
+			item_created_date as itemCreatedDate
+		from sb_cart
+		where cart_item_no = #{value}
+	</select>
+	
+	<select id="getCartItemListByNo" parameterType="string" resultType="com.sb.vo.CartItem">
+		select cart_item_no as no,
+			cart_item_amount as amount,
+			user_id as userId,
+			product_no as productNo,
+			item_created_date as itemCreatedDate
+		from sb_cart
+		where user_id = #{value}
+	</select>
+
+	
+	<select id="getCartItemsByUserId" parameterType="string" resultType="com.sb.dto.CartitemDto">
+		select
+			C.cart_item_no as no,
+  			C.cart_item_amount as cartitemAmount,
+    		C.user_id as userId,
+    		C.product_no as productNo,
+    		P.product_name as productName,
+    		P.product_price as productPrice
+		from
+			sb_cart C, sb_products P
+		where
+			C.user_id = #{value}
+			and C.product_no = P.product_no
+		order by C.cart_item_no
+	</select>
+	
+	<select id="getProductItemsByUserId" parameterType="int" resultType="com.sb.dto.CartitemDto">
+		select
+			C.cart_item_no as no,
+  			C.cart_item_amount as cartitemAmount,
+    		C.user_id as userId,
+    		C.product_no as productNo,
+    		P.product_name as productName,
+    		P.product_price as productPrice
+		from
+			sb_cart C, sb_products P
+		where
+			P.product_no = #{value}
+			and C.product_no = P.product_no
+		order by C.cart_item_no
+	</select>
+	
+	<update id="updateAmountByNo" parameterType="int">
+		update sb_cart set cart_item_amount = cart_item_amount + 1
+		where product_no = #{value}
+	</update>
+	
+
+	
+	
+</mapper>

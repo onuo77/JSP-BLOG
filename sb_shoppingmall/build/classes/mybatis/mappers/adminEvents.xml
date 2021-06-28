@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="adminEvents">
+
+	<insert id="insertEvent" parameterType="com.sb.vo.Event">
+		insert into sb_events
+		(event_no, event_title, event_content, event_file_name, event_start_date, event_end_date)
+		values
+		(#{no}, #{title}, #{content}, #{fileName}, #{startDate}, #{endDate})
+	</insert>
+	
+	<insert id="insertEventItem" parameterType="com.sb.vo.EventItem">
+		insert into sb_event_items
+		(event_no, product_no)
+		values
+		(#{eventNo}, #{productNo})
+	</insert>
+	
+	<delete id="deleteEvent" parameterType="int">
+		delete from sb_events
+		where event_no = #{value}
+	</delete>
+	
+	<delete id="deleteEventProduct" parameterType="int">
+		delete from sb_event_items
+		where event_no = #{value}
+	</delete>
+	
+	<update id="updateEvent" parameterType="com.sb.vo.Event">
+		update sb_events
+		set 
+			EVENT_TITLE = #{title},
+			EVENT_CONTENT = #{content},
+			EVENT_FILE_NAME = #{fileName},
+			EVENT_START_DATE = #{startDate},
+			EVENT_END_DATE = #{endDate}
+		where 
+			event_no = #{no}
+	</update>
+	
+	<select id="getEventSeqNo" resultType="int">
+		select event_seq.nextval from dual
+	</select>
+
+	<select id="getSelectedProducts" parameterType="map" resultType="com.sb.dto.ModifyProduct">
+		select 
+			category_no as categoryNo,
+			product_no as productNo, 
+			product_name as productName, 
+			nvl2((select B.product_no from sb_event_items B where B.product_no = A.product_no and B.event_no = #{eventNo}), 'Y', 'N') as checked
+		from 
+			sb_products A
+		where
+			category_no = #{categoryNo}
+	</select>
+	
+	<select id="getCountByTable" resultType="com.sb.dto.CntDto">
+		select
+			(select count(*) from SB_EVENTS) as eventCnt,
+			(select count(*) from SB_RECIPES) as recipeCnt
+		from dual
+	</select>
+	
+	<select id="getTotalRows" parameterType="map" resultType="int">
+		select
+			count(*)
+		from
+			sb_events
+	</select>
+		
+	<select id="getEvents" parameterType="map" resultType="com.sb.vo.Event">
+		select
+			EVENT_NO as no, 
+			EVENT_TITLE as title,  
+			EVENT_CONTENT as content, 
+			EVENT_FILE_NAME as fileName, 
+			EVENT_START_DATE as startDate, 
+			EVENT_END_DATE as endDate, 
+			EVENT_CREATED_DATE as createdDate
+		from(
+            select
+                row_number() over (order by event_no desc) rn,
+                EVENT_NO, EVENT_TITLE, EVENT_CONTENT, EVENT_FILE_NAME, EVENT_START_DATE, EVENT_END_DATE, EVENT_CREATED_DATE
+            from
+                sb_events
+			)
+		where
+            rn between #{beginIndex} and #{endIndex}
+	</select>
+	
+	<select id="getProductsByCategoryNo" parameterType="int" resultType="com.sb.vo.Product">
+		select
+			product_no as no, 
+			product_name as name, 
+			product_price as price, 
+			product_stock as stock, 
+			category_no as catogoryNo, 
+			product_created_date as createdDate
+		from
+			sb_products
+		where
+			category_no = #{value}
+	</select>
+	
+	<select id="getAllCategory" resultType="com.sb.vo.Category">
+		select
+			category_no as no,
+			category_name as name
+		from
+			sb_category
+	</select>
+
+	<select id="getEventInfoByEventNo" parameterType="int" resultType="com.sb.vo.Event">
+		select
+			EVENT_NO as no, 
+			EVENT_TITLE as title,  
+			EVENT_CONTENT as content, 
+			EVENT_FILE_NAME as fileName, 
+			EVENT_START_DATE as startDate, 
+			EVENT_END_DATE as endDate, 
+			EVENT_CREATED_DATE as createdDate
+		from
+			SB_EVENTS
+		where
+			event_no = #{value}
+	</select>
+	
+	<select id="getProductsByEventNo" parameterType="int" resultType="com.sb.dto.EventProduct">
+		select
+		    e.event_no as eventNo,
+		    c.category_name as category,
+		    p.product_no as productNo,
+		    p.product_name as productName,
+		    p.product_price as productPrice
+		from
+		    sb_events e, sb_category c, sb_products p, sb_event_items ei
+		where
+		    e.event_no = ei.event_no
+		and ei.product_no = p.product_no
+		and c.category_no = p.category_no
+		and e.event_no = #{value}
+	</select>
+	
+	<!-- 최신글 -->
+	<select id="getRecentEvents" resultType="com.sb.vo.Event">
+		select 
+		    event_no as no,
+		    event_title as title,
+		    event_start_date as startDate,
+		    event_end_date as endDate
+		from (select *
+		      from sb_events
+		      order by event_no desc)
+		where rownum &lt;= 3
+	</select>
+</mapper>

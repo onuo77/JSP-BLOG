@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="recipes">
+	<select id="getTotalRows" parameterType="map" resultType="int">
+		select 
+			count(*)
+		from 
+			sb_recipes
+		<if test="keyword != null">
+			where recipe_ingredient like '%' || #{keyword} || '%'
+		</if>
+		
+	</select>
+
+	<select id="getRecipes" parameterType="map" resultType="com.sb.vo.Recipe">
+			select
+				recipe_no				as no,
+				recipe_title			as title,
+				recipe_ingredient		as ingredient,
+				recipe_content			as content,
+				recipe_file_name		as fileName,
+				recipe_created_date		as createdDate
+			from(
+				select
+				row_number() over (order by recipe_created_date desc) rn,
+				recipe_no, recipe_title, recipe_ingredient, recipe_content, recipe_file_name, recipe_created_date 
+				from sb_recipes
+				<if test="keyword != null">
+					where recipe_ingredient like '%' || #{keyword} || '%' 
+				</if>				
+				)
+			where rn between #{beginIndex} and #{endIndex}
+	</select>
+	
+	<select id="getRecipeByNo" parameterType="int" resultType="com.sb.vo.Recipe">
+		select
+				recipe_no				as no,
+				recipe_title			as title,
+				recipe_ingredient		as ingredient,
+				recipe_content			as content,
+				recipe_file_name		as fileName,
+				recipe_created_date		as createdDate
+			from
+				sb_recipes
+			where
+				recipe_no = #{value}
+	</select>
+		
+</mapper>

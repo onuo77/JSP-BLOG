@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="orderList">
+
+	<delete id="deleteOrderList" parameterType="int">
+		delete sb_orders
+		where order_no = #{value}
+	</delete>
+	
+	
+	<select id="getCartListByUserId" parameterType="string" resultType="com.sb.dto.OrderListDto">
+		select
+			O.order_no as orderNo,
+			O.order_status as orderStatus,
+			C.user_id as userId,
+			P.product_no as productNo,
+			P.product_name as productName,
+			P.product_price as productPrice,
+			O.order_created_date as orderCreatedDate,
+			C.cart_item_amount as cartitemAmount
+		from
+			sb_cart C, sb_products P, sb_orders O
+		where
+            C.user_id = #{value}
+			and C.product_no = P.product_no
+			and O.user_id = C.user_id
+	</select>
+	
+	<select id="getOrderListByProductNo" parameterType="int" resultType="com.sb.dto.OrderListDto">
+		select
+			O.order_no as orderNo,
+			O.order_status as orderStatus,
+			C.user_id as userId,
+			P.product_no as productNo,
+			P.product_name as productName,
+			P.product_price as productPrice,
+			O.order_created_date as orderCreatedDate,
+			C.cart_item_amount as cartitemAmount,
+			O.order_item_amount as oderItemAmount
+		from
+			sb_cart C, sb_products P, sb_orders O
+		where
+            P.product_no = #{value}
+			and C.product_no = P.product_no
+			and O.user_id = C.user_id
+	</select>
+	
+	<select id="getOrderListByUserId" parameterType="string" resultType="com.sb.dto.OrderListDto">
+		select
+			O.order_no as orderNo,
+			O.order_status as orderStatus,
+			C.user_id as userId,
+			P.product_no as productNo,
+			P.product_name as productName,
+			P.product_price as productPrice,
+			O.order_created_date as orderCreatedDate,
+			C.cart_item_amount as cartitemAmount,
+			O.order_item_amount as orderItemAmount
+		from
+			sb_cart C, sb_products P, sb_orders O
+		where
+            O.user_id = #{value}
+			and C.product_no = P.product_no
+			and O.product_no = C.product_no
+			and O.user_id = C.user_id
+			and C.cart_item_no = O.cart_item_no
+	</select>
+	
+	<select id="getOrderItemListByUserId" parameterType="string" resultType="com.sb.dto.OrderListDto">
+		select
+			O.order_no as orderNo,
+			O.order_status as orderStatus,
+			C.user_id as userId,
+			P.product_no as productNo,
+			P.product_name as productName,
+			P.product_price as productPrice,
+			O.order_created_date as orderCreatedDate,
+			C.cart_item_amount as cartitemAmount,
+			O.order_item_amount as orderItemAmount
+		from
+			sb_cart C, sb_products P, sb_orders O
+		where
+            O.user_id = #{value}
+			and C.product_no = P.product_no
+			and O.product_no = C.product_no
+			and O.user_id = C.user_id
+			and C.cart_item_no = O.cart_item_no
+	</select>
+	
+	
+	<insert id="insertOrderList" parameterType="com.sb.vo.OrderList">
+		insert into sb_orders
+		(order_no, user_id, product_no, cart_item_no, order_item_amount)
+		values
+		(orderlist_seq.nextval, #{userId}, #{productNo}, #{no}, #{orderItemAmount} )
+	</insert>
+
+	<select id="getOrderItemByNo" parameterType="int" resultType="com.sb.vo.OrderList">
+		select 
+			order_no as orderNo,
+			user_id as userId,
+			product_no as productNo,
+			order_status as orderStatus,
+			order_total_price as orderTotalPrice,
+			order_created_date as orderCreatedDate,
+			order_item_amount as orderItemAmount,
+			cart_item_no as no
+		from sb_orders
+		where order_no = #{value}
+	</select>
+	
+	<update id="updateAmountByNo" parameterType="int">
+		update sb_products set (product_stock) = (product_stock - (select cart_item_amount
+    	from sb_cart where product_no = #{value }))
+		where product_no = #{value }
+	</update>
+	
+</mapper>

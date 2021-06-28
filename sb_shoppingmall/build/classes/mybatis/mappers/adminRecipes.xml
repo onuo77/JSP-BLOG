@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="adminRecipes">
+
+	<insert id="insertRecipe" parameterType="com.sb.vo.Recipe">
+		insert into sb_recipes
+		(recipe_no, recipe_title, recipe_INGREDIENT, recipe_content, recipe_file_name)
+		values
+		(#{no}, #{title}, #{ingredient}, #{content}, #{fileName})
+	</insert>
+	
+	<insert id="insertRecipeItem" parameterType="com.sb.vo.RecipeItem">
+		insert into sb_recipe_items
+		(recipe_no, product_no)
+		values
+		(#{recipeNo}, #{productNo})
+	</insert>
+
+	<delete id="deleteRecipe" parameterType="int">
+		delete from sb_recipes
+		where recipe_no = #{value}
+	</delete>
+	
+	<delete id="deleteRecipeProduct" parameterType="int">
+		delete from sb_recipe_items
+		where recipe_no = #{value}
+	</delete>
+	
+	<update id="updateRecipe" parameterType="com.sb.vo.Recipe">
+		update sb_recipes
+		set 
+			RECIPE_TITLE = #{title},
+			RECIPE_INGREDIENT = #{ingredient},
+			RECIPE_CONTENT = #{content},
+			RECIPE_FILE_NAME = #{fileName}
+		where 
+			recipe_no = #{no}
+	</update>
+
+	<select id="getTotalRows" parameterType="map" resultType="int">
+		select
+			count(*)
+		from
+			sb_recipes
+	</select>
+	
+	<select id="getRecipeSeqNo" resultType="int">
+		select recipe_seq.nextval from dual
+	</select>
+		
+	<select id="getRecipes" parameterType="map" resultType="com.sb.vo.Recipe">
+		select
+			RECIPE_NO as no,
+			RECIPE_TITLE as title,
+			RECIPE_INGREDIENT as ingredient,
+			RECIPE_CONTENT as content,
+			RECIPE_FILE_NAME as fileName,
+			RECIPE_CREATED_DATE as createdDate
+		from(
+            select
+                row_number() over (order by RECIPE_NO desc) rn,
+                RECIPE_NO, RECIPE_TITLE, RECIPE_INGREDIENT,RECIPE_CONTENT, RECIPE_FILE_NAME, RECIPE_CREATED_DATE
+            from
+                sb_recipes
+			)
+		where
+            rn between #{beginIndex} and #{endIndex}
+	</select>
+	
+	<select id="getRecipeInfoByRecipeNo" parameterType="int" resultType="com.sb.vo.Recipe">
+		select
+			RECIPE_NO as no,
+			RECIPE_TITLE as title,
+			RECIPE_INGREDIENT as ingredient,
+			RECIPE_CONTENT as content,
+			RECIPE_FILE_NAME as fileName,
+			RECIPE_CREATED_DATE as createdDate
+		from
+			sb_recipes
+		where
+			RECIPE_NO = #{value}
+	</select>
+	
+	<select id="getProductsByRecipeNo" parameterType="int" resultType="com.sb.dto.RecipeProduct">
+		select
+		    r.RECIPE_NO as recipeNo,
+		    c.category_name as category,
+		    p.product_no as productNo,
+		    p.product_name as productName,
+		    p.product_price as productPrice
+		from
+		    sb_recipes r, sb_category c, sb_products p, sb_recipe_items ri
+		where
+		    r.recipe_no = ri.recipe_no
+		and ri.product_no = p.product_no
+		and c.category_no = p.category_no
+		and r.recipe_no = #{value}
+	</select>	
+	
+	<select id="getSelectedProducts" parameterType="map" resultType="com.sb.dto.ModifyProduct">
+		select 
+			category_no as categoryNo,
+			product_no as productNo, 
+			product_name as productName, 
+			nvl2((select B.product_no from sb_recipe_items B where B.product_no = A.product_no and B.recipe_no = #{recipeNo}), 'Y', 'N') as checked
+		from 
+			sb_products A
+		where
+			category_no = #{categoryNo}
+	</select>
+	
+	<!-- 최신글 -->
+	<select id="getRecentRecipes" resultType="com.sb.vo.Recipe">
+		select
+			recipe_no as no,
+			recipe_title as title,
+			recipe_created_date as createdDate
+		from (select *
+			  from sb_recipes
+			  order by recipe_no desc)
+		where
+		    rownum &lt;= 3			
+	</select>
+</mapper>
