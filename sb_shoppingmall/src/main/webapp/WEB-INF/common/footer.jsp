@@ -26,7 +26,7 @@
 					<div class="col-xl-auto col-md-6 col-12 my-sm-0 mt-5">
 						<ul class="list-unstyled">
 							<h3>고객센터</h3>
-							<li class="mt-md-3 mt-4">010.2185.6628</li>
+							<li class="mt-md-3 mt-4">070.0000.0000</li>
 
 						</ul>
 					</div>
