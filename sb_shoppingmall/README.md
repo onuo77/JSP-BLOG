@@ -31,7 +31,10 @@ create user sb identified by zxcv1234;
 grant connect, resource, dba to sb
 ```
 
-## 테이블 생성(Creating Table)
+<details>
+<summary>테이블 생성(Creating Table)</summary>
+<div markdown="1">
+	
 ```sql
 [이벤트,레시피 테이블]
 
@@ -250,6 +253,9 @@ start with 1
 increment by 1;
 ```
 
+</div>
+</details>
+
 <hr/>
 
 ## SB 패키지 (Pakage)
@@ -280,8 +286,10 @@ increment by 1;
 + [로그인 시 메인화면](#로그인시메인화면)
 + [기획전 조회](#기획전조회)
 + [기획전 등록](#기획전등록)
++ [기획전 수정 및 삭제](#기획전수정및삭제)
 + [레시피 조회](#레시피조회)
 + [레시피 등록](#레시피등록)
++ [레시피 수정 및 삭제](#레시피수정및삭제)
 
 ### [관리자페이지 접근 시 로그인 화면으로 이동](#주요기능-Key-Features)
 ![image](https://user-images.githubusercontent.com/78708523/123631349-9c3b1380-d851-11eb-9b5f-59874c1eaf03.png)
@@ -313,7 +321,7 @@ increment by 1;
 
 ### [기획전 수정 및 삭제](#주요기능-Key-Features)
 ![GIF 2021-06-28 오후 9-15-19](https://user-images.githubusercontent.com/78708523/123635084-31400b80-d856-11eb-81e0-f9d41729576f.gif)
-- 기존에 등록되어 있던 레시피 수정 가능
+- 기존에 등록되어 있던 기획전 수정 가능
 - 등록할 때와 마찬가지로 날짜, 썸네일 선택 가능
 - 기존에 선택했던 상품들이 체크되어 있어서 쉽게 확인 가능
 ![GIF 2021-06-28 오후 9-20-09](https://user-images.githubusercontent.com/78708523/123635492-b1667100-d856-11eb-879e-cd4fce1db29b.gif)
@@ -331,9 +339,18 @@ increment by 1;
 <hr/>
 
 ### [레시피 등록](#주요기능-Key-Features)
-![GIF 2021-06-28 오후 8-58-48](https://user-images.githubusercontent.com/78708523/123633396-1e2c3c00-d854-11eb-85c0-ca60507efb46.gif)
-- 타이틀, 내용(기획전 소제목), 시작일, 종료일, 카테고리별 상품 선택 가능
-- 시작일과 종료일은 등록하는 당일 이전을 선택할 수 없으며, 시작일은 종료일을 넘는 것이 불가능
+![GIF 2021-06-28 오후 9-32-08](https://user-images.githubusercontent.com/78708523/123637080-8e3cc100-d858-11eb-98d7-09e59a0b1d46.gif)
+- 썸네일, 타이틀, 재료, 레시피, 레시피 관련 상품 선택 가능
+
+<hr/>
+
+### [레시피 수정 및 삭제](#주요기능-Key-Features)
+![GIF 2021-06-28 오후 9-38-12](https://user-images.githubusercontent.com/78708523/123637782-5e41ed80-d859-11eb-82e6-9b0e3b30a8a2.gif)
+- 기존에 등록되어 있던 레시피 수정 가능
+- 등록할 때와 마찬가지로 날짜, 썸네일 선택 가능
+- 기존에 선택했던 상품들이 체크되어 있어서 쉽게 확인 가능
+![GIF 2021-06-28 오후 9-40-42](https://user-images.githubusercontent.com/78708523/123637948-8fbab900-d859-11eb-80b4-be9470ee508f.gif)
+- 삭제버튼으로 손쉽게 삭제 가능
 
 <hr/>
 ## 초기 UI/UX 디자인
