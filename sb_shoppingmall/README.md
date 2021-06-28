@@ -360,7 +360,9 @@ increment by 1;
 - 삭제버튼으로 손쉽게 삭제 가능
 
 <hr/>
-## 초기 UI/UX 디자인
+
+### 초기 UI/UX 디자인
+
 <details>
 <summary>상세 내용 확인</summary>
 <div markdown="1">
