@@ -4,7 +4,7 @@
 + 4개월동안 배운 것을 토대로 팀원과 함께 프로젝트 진행
 + 사고보자 쇼핑몰은 식자재마트를 모티브로 제작되었습니다.
 + 일반사용자는 상품을 조회 및 수량 조정하여 장바구니에 담기 기능
-+ 관리자는 기획전/레시피 조회, 추가, 수정, 삭제 기능
++ 🙋‍♀️관리자는 기획전/레시피 조회, 추가, 수정, 삭제 기능
 + 레시피에서 해당하는 상품목록을 한 번에 장바구니에 담는 기능
 + 기획전의 마감 시간을 초단위로 출력하는 기능
 
@@ -252,9 +252,12 @@ increment by 1;
 
 <hr/>
 
-## jspblog 패키지 (Pakage)
-![image](https://user-images.githubusercontent.com/78708523/107164592-1a0d9800-69f3-11eb-8d41-d3ddfb45648d.png)
-![image](https://user-images.githubusercontent.com/78708523/107164641-475a4600-69f3-11eb-8818-40a1561fc376.png)
+## SB 패키지 (Pakage)
+![image](https://user-images.githubusercontent.com/78708523/123630549-a01a6600-d850-11eb-9a67-e1e1b8d969dc.png)
+![image](https://user-images.githubusercontent.com/78708523/123630588-ac9ebe80-d850-11eb-9143-a7bd66b74559.png)
+![image](https://user-images.githubusercontent.com/78708523/123630644-baecda80-d850-11eb-958c-ff6d3a828407.png)
+![image](https://user-images.githubusercontent.com/78708523/123630816-ef609680-d850-11eb-9197-332e5f5ca38a.png)
+![image](https://user-images.githubusercontent.com/78708523/123630847-fd161c00-d850-11eb-943f-80375d7de52e.png)
 
 <hr/>
 
@@ -263,8 +266,17 @@ increment by 1;
 
 <hr/>
 
+## 메인화면 및 세부화면 캡쳐
+![image](https://user-images.githubusercontent.com/78708523/123630145-208c9700-d850-11eb-9636-360a5398185e.png)
+![image](https://user-images.githubusercontent.com/78708523/123630365-65b0c900-d850-11eb-9a97-5bf330fbf1ed.png)
+![image](https://user-images.githubusercontent.com/78708523/123630945-1b7c1780-d851-11eb-94d9-6f4241c9a3bb.png)
+![image](https://user-images.githubusercontent.com/78708523/123631014-351d5f00-d851-11eb-8fab-137c7aef0db3.png)
+
+<hr/>
+
 ## 주요기능 (Key Features)
-+ [회원가입(Sign Up)](#회원가입Sign-Up)	
++ 🙋‍♀️관리자는 기획전/레시피 조회, 추가, 수정, 삭제 기능
++ [관리자페이지 접근 시 로그인 화면으로 이동](#회원가입Sign-Up)	
 + [로그인(Login)&로그아웃(Logout)](#로그인Login로그아웃Logout)
 + [개인정보수정(UserInfo Modify)](#개인정보수정UserInfo-Modify)
 + [글작성(Porst Write)](#글작성Post-Write)
@@ -273,8 +285,8 @@ increment by 1;
 + [검색(Search)](#검색Search)
 + [페이징 진행바(Paging Progress)](#페이징-진행바Paging-Progress)
 
-### [회원가입(Sign Up)](#주요기능-Key-Features)
-![001](https://user-images.githubusercontent.com/78708523/107165837-82f70f00-69f7-11eb-88e9-e91f08dfebc5.gif)
+### [관리자페이지 접근 시 로그인 화면으로 이동](#주요기능-Key-Features)
+![image](https://user-images.githubusercontent.com/78708523/123631349-9c3b1380-d851-11eb-9b5f-59874c1eaf03.png)
 
 <hr/>
 
