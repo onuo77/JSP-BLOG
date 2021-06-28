@@ -259,11 +259,18 @@ increment by 1;
 <hr/>
 
 ## SB 패키지 (Pakage)
+<details>
+<summary>상세 내용 확인</summary>
+<div markdown="1">
+
 ![image](https://user-images.githubusercontent.com/78708523/123630549-a01a6600-d850-11eb-9a67-e1e1b8d969dc.png)
 ![image](https://user-images.githubusercontent.com/78708523/123630588-ac9ebe80-d850-11eb-9143-a7bd66b74559.png)
 ![image](https://user-images.githubusercontent.com/78708523/123630644-baecda80-d850-11eb-958c-ff6d3a828407.png)
 ![image](https://user-images.githubusercontent.com/78708523/123630816-ef609680-d850-11eb-9197-332e5f5ca38a.png)
 ![image](https://user-images.githubusercontent.com/78708523/123630847-fd161c00-d850-11eb-943f-80375d7de52e.png)
+
+</div>
+</details>
 
 <hr/>
 
