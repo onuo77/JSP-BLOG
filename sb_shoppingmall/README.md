@@ -291,7 +291,7 @@ increment by 1;
 <hr/>
 
 ### [로그인 시 메인화면](#주요기능-Key-Features)
-![image](https://user-images.githubusercontent.com/78708523/123631959-503c9e80-d852-11eb-93cc-fba1534526d8.png)
+![image](https://user-images.githubusercontent.com/78708523/123633909-c04c2400-d854-11eb-82c8-a3992a444994.png)
 - 등록된 기획전/레시피의 갯수 확인 가능
 - 최근 등록된 3개의 기획전/레시피 확인 가능
 
