@@ -2,6 +2,7 @@
 
 ## 개요
 + 4개월동안 배운 것을 토대로 팀원과 함께 프로젝트 진행
++ 사고보자 쇼핑몰은 식자재마트를 모티브로 제작되었습니다.
 + 일반사용자는 상품을 조회 및 수량 조정하여 장바구니에 담기 기능
 + 관리자는 기획전/레시피 조회, 추가, 수정, 삭제 기능
 + 레시피에서 해당하는 상품목록을 한 번에 장바구니에 담는 기능
@@ -9,19 +10,16 @@
 
 <hr/>
 
-## 개발환경 (Development Environment)
-+ eclieps 
+## 프로젝트 개발환경 및 기술 (Development Environment)
++ eclipse
 + ORACLE DB
 + Apache Tomcat 10
-
-## 개발언어 (Programming Language)
++ MyBatis
 + Java
 + Jsp
 + JavaScript
 + HTML
 + CSS
-
-## 프레임워크 및 라이브러리 (Framework & Library)
 + Bootstrap 4.5.2
 
 <hr/>
