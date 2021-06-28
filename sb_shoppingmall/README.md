@@ -20,7 +20,7 @@
 + JavaScript
 + HTML
 + CSS
-+ Bootstrap 4.5.2
++ Bootstrap
 
 <hr/>
 
