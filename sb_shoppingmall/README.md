@@ -281,7 +281,7 @@ increment by 1;
 
 ## 메인화면 및 세부화면 캡쳐
 ![image](https://user-images.githubusercontent.com/78708523/123630145-208c9700-d850-11eb-9636-360a5398185e.png)
-![image](https://user-images.githubusercontent.com/78708523/123630365-65b0c900-d850-11eb-9a97-5bf330fbf1ed.png)
+![image](https://user-images.githubusercontent.com/78708523/123639724-70bd2680-d85b-11eb-9290-d0eaa98e81e8.png)
 ![image](https://user-images.githubusercontent.com/78708523/123630945-1b7c1780-d851-11eb-94d9-6f4241c9a3bb.png)
 ![image](https://user-images.githubusercontent.com/78708523/123631014-351d5f00-d851-11eb-8fab-137c7aef0db3.png)
 
