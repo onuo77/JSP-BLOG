@@ -276,7 +276,7 @@ increment by 1;
 
 ## 주요기능 (Key Features)
 + 🙋‍♀️관리자는 기획전/레시피 조회, 추가, 수정, 삭제 기능
-+ [관리자페이지 접근 시 로그인 화면으로 이동](#회원가입Sign-Up)	
++ [관리자페이지 접근 시 로그인 화면으로 이동](#관리자페이지접근시로그인화면으로이동)	
 + [로그인(Login)&로그아웃(Logout)](#로그인Login로그아웃Logout)
 + [개인정보수정(UserInfo Modify)](#개인정보수정UserInfo-Modify)
 + [글작성(Porst Write)](#글작성Post-Write)
