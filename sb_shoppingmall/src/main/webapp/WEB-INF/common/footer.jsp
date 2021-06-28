@@ -17,8 +17,8 @@
 					<div class="col-md-6 col-12 my-sm-0 mt-5">
 						<ul class="list-unstyled">
 							<li class="mt-md-1 mt-1">상호명 : 사고보자</li>
-							<li>주소 : 서울특별시 종로구 율곡로10길 105 디아망 401호</li>
-							<li>대표 : 김남미, 유동희, 윤장희, 이강욱, 홍용우</li>
+							<li>주소 : 서울특별시 종로구</li>
+							<li>대표 : *,*,*,*,*</li>
 
 						</ul>
 					</div>
