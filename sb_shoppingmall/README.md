@@ -258,8 +258,8 @@ increment by 1;
 
 <hr/>
 
-## jspblog 데이터베이스 모델링 (ERD)
-![image](https://user-images.githubusercontent.com/78708523/107164686-753f8a80-69f3-11eb-905f-96d0baf5ebe0.png)
+## 데이터베이스 모델링 (ERD)
+![image](https://user-images.githubusercontent.com/78708523/123609608-c503de80-d83a-11eb-98fd-64c4fa829146.png)
 
 <hr/>
 
