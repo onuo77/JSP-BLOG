@@ -354,6 +354,17 @@ increment by 1;
 
 <hr/>
 ## 초기 UI/UX 디자인
-+ 댓글 수정 및 대댓글 기능
-+ 게시글 앞에 이미지 첨부 시 썸네일 표시 기능
-+ 좋아요 및 해시태그 기능
+<details>
+<summary>상세 내용 확인</summary>
+<div markdown="1">
+
+![Canvas](https://user-images.githubusercontent.com/78708523/123638279-f6d86d80-d859-11eb-904e-59d45f4a2673.jpg)
+![Canvas – 1](https://user-images.githubusercontent.com/78708523/123638290-f93ac780-d859-11eb-90e3-84d64f4150a1.jpg)
+![Canvas – 2](https://user-images.githubusercontent.com/78708523/123638316-00fa6c00-d85a-11eb-8975-04bef2f240a3.jpg)
+![Canvas – 4](https://user-images.githubusercontent.com/78708523/123638324-02c42f80-d85a-11eb-975a-52a0e0c6c7ab.jpg)
+![Canvas – 6](https://user-images.githubusercontent.com/78708523/123638303-fd66e500-d859-11eb-940a-7f1de0f6209e.jpg)
+
+
+</div>
+</details>
+
