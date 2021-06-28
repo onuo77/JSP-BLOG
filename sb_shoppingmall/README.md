@@ -280,10 +280,8 @@ increment by 1;
 + [로그인 시 메인화면](#로그인시메인화면)
 + [기획전 조회](#기획전조회)
 + [기획전 등록](#기획전등록)
-+ [글수정(Post Modify)](#글수정Post-Modify)
-+ [댓글 작성&삭제(Comment Write&Delete)](#댓글-작성삭제Comment-WriteDelete)
-+ [검색(Search)](#검색Search)
-+ [페이징 진행바(Paging Progress)](#페이징-진행바Paging-Progress)
++ [레시피 조회](#레시피조회)
++ [레시피 등록](#레시피등록)
 
 ### [관리자페이지 접근 시 로그인 화면으로 이동](#주요기능-Key-Features)
 ![image](https://user-images.githubusercontent.com/78708523/123631349-9c3b1380-d851-11eb-9b5f-59874c1eaf03.png)
@@ -313,31 +311,31 @@ increment by 1;
 
 <hr/>
 
-### [글수정(Post Modify)](#주요기능-Key-Features)
-![004](https://user-images.githubusercontent.com/78708523/107167239-b8056080-69fb-11eb-8a5c-f52271662582.gif)
+### [기획전 수정 및 삭제](#주요기능-Key-Features)
+![GIF 2021-06-28 오후 9-15-19](https://user-images.githubusercontent.com/78708523/123635084-31400b80-d856-11eb-81e0-f9d41729576f.gif)
+- 기존에 등록되어 있던 레시피 수정 가능
+- 등록할 때와 마찬가지로 날짜, 썸네일 선택 가능
+- 기존에 선택했던 상품들이 체크되어 있어서 쉽게 확인 가능
+![GIF 2021-06-28 오후 9-20-09](https://user-images.githubusercontent.com/78708523/123635492-b1667100-d856-11eb-879e-cd4fce1db29b.gif)
+- 삭제버튼으로 손쉽게 삭제 가능
+<hr/>
+
+### [레시피 조회](#주요기능-Key-Features)
+![image](https://user-images.githubusercontent.com/78708523/123634276-318bd700-d855-11eb-9731-bedabb31b229.png)
+- 등록된 레시피의 썸네일, 레시피명 확인 가능 게시판 목록에서 수정 및 삭제 가능
+![image](https://user-images.githubusercontent.com/78708523/123634436-65ff9300-d855-11eb-8cae-ede2134630b6.png)
+![image](https://user-images.githubusercontent.com/78708523/123634481-744daf00-d855-11eb-805d-c9d83f395e20.png)
+- 레시피 상세 조회로 등록된 썸네일 및 상품 조회가 가능
+- 리스트에서와 마찬가지로 수정, 삭제 가능
 
 <hr/>
 
-### [글삭제(Post Delete)](#주요기능-Key-Features)
-![004_2](https://user-images.githubusercontent.com/78708523/107167243-b9368d80-69fb-11eb-9d67-f54b7b1a5c32.gif)
+### [레시피 등록](#주요기능-Key-Features)
+![GIF 2021-06-28 오후 8-58-48](https://user-images.githubusercontent.com/78708523/123633396-1e2c3c00-d854-11eb-85c0-ca60507efb46.gif)
+- 타이틀, 내용(기획전 소제목), 시작일, 종료일, 카테고리별 상품 선택 가능
+- 시작일과 종료일은 등록하는 당일 이전을 선택할 수 없으며, 시작일은 종료일을 넘는 것이 불가능
 
 <hr/>
-
-### [댓글 작성&삭제(Comment Write&Delete)](#주요기능-Key-Features)
-![005](https://user-images.githubusercontent.com/78708523/107167247-bb005100-69fb-11eb-8381-6105700ace0c.gif)
-
-<hr/>
-
-### [검색(Search)](#주요기능-Key-Features)
-![006](https://user-images.githubusercontent.com/78708523/107168533-f94b3f80-69fe-11eb-8dbd-39709301fa5b.gif)
-
-<hr/>
-
-### [페이징 진행바(Paging Progress)](#주요기능-Key-Features)
-![008](https://user-images.githubusercontent.com/78708523/107175500-58fe1680-6a10-11eb-9ff9-f19a399a57c4.gif)
-
-<hr/>
-
 ## 초기 UI/UX 디자인
 + 댓글 수정 및 대댓글 기능
 + 게시글 앞에 이미지 첨부 시 썸네일 표시 기능
