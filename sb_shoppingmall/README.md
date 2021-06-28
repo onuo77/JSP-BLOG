@@ -298,7 +298,7 @@ increment by 1;
 <hr/>
 
 ### [기획전 조회](#주요기능-Key-Features)
-![007](https://user-images.githubusercontent.com/78708523/107170318-5e089900-6a03-11eb-97c6-9ffd134d1a80.gif)
+![image](https://user-images.githubusercontent.com/78708523/123633794-9e52a180-d854-11eb-9d00-c75b3d620490.png)
 - 등록된 기획전의 썸네일, 기획전명, 시작일, 종료일 확인 가능 게시판 목록에서 수정 및 삭제 가능
 ![image](https://user-images.githubusercontent.com/78708523/123632315-c17c5180-d852-11eb-9617-6b53a5234380.png)
 - 기획전 상세 조회로 등록된 썸네일 및 상품 조회가 가능
