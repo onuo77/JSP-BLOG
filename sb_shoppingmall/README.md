@@ -4,7 +4,7 @@
 + 4개월동안 배운 것을 토대로 팀원과 함께 프로젝트 진행
 + 사고보자 쇼핑몰은 식자재마트를 모티브로 제작되었습니다.
 + 일반사용자는 상품을 조회 및 수량 조정하여 장바구니에 담기 기능
-+ 🙋‍♀️관리자는 기획전/레시피 조회, 추가, 수정, 삭제 기능
++ 🙋‍♀️관리자는 기획전/레시피 조회, 추가, 수정, 삭제 기능 (+BOOTSTRAP을 이용한 디자인, UI 설계)
 + 레시피에서 해당하는 상품목록을 한 번에 장바구니에 담는 기능
 + 기획전의 마감 시간을 초단위로 출력하는 기능
 
@@ -277,9 +277,9 @@ increment by 1;
 ## 주요기능 (Key Features)
 + 🙋‍♀️관리자는 기획전/레시피 조회, 추가, 수정, 삭제 기능
 + [관리자페이지 접근 시 로그인 화면으로 이동](#관리자페이지접근시로그인화면으로이동)	
-+ [로그인(Login)&로그아웃(Logout)](#로그인Login로그아웃Logout)
-+ [개인정보수정(UserInfo Modify)](#개인정보수정UserInfo-Modify)
-+ [글작성(Porst Write)](#글작성Post-Write)
++ [로그인 시 메인화면](#로그인시메인화면)
++ [기획전 조회](#기획전조회)
++ [기획전 등록](#기획전등록)
 + [글수정(Post Modify)](#글수정Post-Modify)
 + [댓글 작성&삭제(Comment Write&Delete)](#댓글-작성삭제Comment-WriteDelete)
 + [검색(Search)](#검색Search)
@@ -290,21 +290,26 @@ increment by 1;
 
 <hr/>
 
-### [로그인(Login)&로그아웃(Logout)](#주요기능-Key-Features)
-- 로그인 성공&로그아웃 (Login Sucess & Logout)
-![loginout](https://user-images.githubusercontent.com/78708523/107170322-5f39c600-6a03-11eb-99a8-dddc9c0285c1.gif)
-- 로그인 실패(Login Failed)
-![002_2](https://user-images.githubusercontent.com/78708523/107166432-56dc8d80-69f9-11eb-9323-22c6378e44d5.gif)
+### [로그인 시 메인화면](#주요기능-Key-Features)
+![image](https://user-images.githubusercontent.com/78708523/123631959-503c9e80-d852-11eb-93cc-fba1534526d8.png)
+- 등록된 기획전/레시피의 갯수 확인 가능
+- 최근 등록된 3개의 기획전/레시피 확인 가능
 
 <hr/>
 
-### [개인정보수정(UserInfo Modify)](#주요기능-Key-Features)
+### [기획전 조회](#주요기능-Key-Features)
 ![007](https://user-images.githubusercontent.com/78708523/107170318-5e089900-6a03-11eb-97c6-9ffd134d1a80.gif)
+- 등록된 기획전의 썸네일, 기획전명, 시작일, 종료일 확인 가능 게시판 목록에서 수정 및 삭제 가능
+![image](https://user-images.githubusercontent.com/78708523/123632315-c17c5180-d852-11eb-9617-6b53a5234380.png)
+- 기획전 상세 조회로 등록된 썸네일 및 상품 조회가 가능
+- 리스트에서와 마찬가지로 수정, 삭제 가능
 
 <hr/>
 
-### [글작성(Post Write)](#주요기능-Key-Features)
-![003](https://user-images.githubusercontent.com/78708523/107175983-8b5c4380-6a11-11eb-9794-33343343ed2f.gif)
+### [기획전 등록](#주요기능-Key-Features)
+![GIF 2021-06-28 오후 8-58-48](https://user-images.githubusercontent.com/78708523/123633396-1e2c3c00-d854-11eb-85c0-ca60507efb46.gif)
+- 타이틀, 내용(기획전 소제목), 시작일, 종료일, 카테고리별 상품 선택 가능
+- 시작일과 종료일은 등록하는 당일 이전을 선택할 수 없으며, 시작일은 종료일을 넘는 것이 불가능
 
 <hr/>
 
@@ -333,7 +338,7 @@ increment by 1;
 
 <hr/>
 
-## 더 추가해보고 싶은 기능
+## 초기 UI/UX 디자인
 + 댓글 수정 및 대댓글 기능
 + 게시글 앞에 이미지 첨부 시 썸네일 표시 기능
 + 좋아요 및 해시태그 기능
